@@ -1,0 +1,77 @@
+﻿<Window x:Class="MemoryGame.Views.LoginView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:MemoryGame.ViewModels"
+        xmlns:local="clr-namespace:MemoryGame.Converters"
+        Title="Login" Height="400" Width="500" WindowStyle="None"
+ResizeMode="NoResize"
+>
+    <Window.Background>
+        <ImageBrush ImageSource="/Views/lobby.jpg"/>
+    </Window.Background>
+
+    <Window.DataContext>
+        <vm:LoginViewModel/>
+    </Window.DataContext>
+
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1.5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="271"/>
+            <RowDefinition Height="Auto" MinHeight="129"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="0" Grid.Row="0" Margin="0,0,0,0">
+            <TextBlock Text="Log in..."
+               FontSize="32"
+               FontWeight="Bold"
+               Foreground="#FF920EBB"
+               HorizontalAlignment="Center"
+               Margin="0,0,0,10"/>
+            <ListBox Height="200"
+             ItemsSource="{Binding Users}"
+             SelectedItem="{Binding SelectedUser}"
+             DisplayMemberPath="Name" BorderBrush="#FF920EBB" Foreground="#FF920EBB" Margin="0,0,0,49">
+                <ListBox.Background>
+                    <SolidColorBrush Color="#FFFEEFF6" Opacity="0.4"/>
+                </ListBox.Background>
+            </ListBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" 
+                Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,10" Width="266">
+            <Button Content="Create User" Command="{Binding CreateUserCommand}" FontSize="17" Margin="5" Width="94" Background="#FFF6C6F0" BorderBrush="#FF920EBB" Foreground="#FF920EBB" Height="37"/>
+            <Button Content="Delete User" Command="{Binding DeleteUserCommand}" FontSize="17" Margin="5"
+                IsEnabled="{Binding SelectedUser, Converter={StaticResource NullToBoolConverter}}" Width="91" Background="#FFF6C6F0" BorderBrush="#FF920EBB" Foreground="#FF920EBB" Height="37"/>
+            <Button Content="Exit" Click="Exit_Click" Margin="5" Width="51" FontSize="17" Background="#FFF6C6F0" BorderBrush="#FF920EBB" Foreground="#FF920EBB" Height="37"/>
+
+        </StackPanel>
+
+        <Border Grid.Column="1" Grid.Row="0"
+            Margin="28,85,28,0"
+            VerticalAlignment="Top"
+            Height="150">
+            <Image Source="{Binding SelectedUser.ImagePath, Converter={StaticResource PathToImageConverter}}"
+       Stretch="UniformToFill"/>
+        </Border>
+        <StackPanel  Grid.Column="1" Grid.Row="1"
+                Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,30,0,10" Width="116">
+            <Button Content="Play" Command="{Binding PlayCommand}" Margin="5"
+                IsEnabled="{Binding SelectedUser, Converter={StaticResource NullToBoolConverter}}" FontSize="50" Height="70" Width="106" BorderBrush="{x:Null}" FontFamily="Imprint MT Shadow" Background="{x:Null}" FontWeight="Bold">
+                <Button.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFE66DD5" Offset="0.53"/>
+                        <GradientStop Color="#FFB825E5" Offset="1"/>
+                        <GradientStop Color="#FFE5A1DB" Offset="0"/>
+                        <GradientStop Color="#FFF1B7F3"/>
+                    </LinearGradientBrush>
+                </Button.Foreground>
+            </Button>
+        </StackPanel>
+    </Grid>
+
+
+</Window>

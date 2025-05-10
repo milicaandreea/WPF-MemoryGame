@@ -1,0 +1,34 @@
+﻿<Window x:Class="MemoryGame.Views.CreateUserDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Create User" Height="400" Width="600" WindowStartupLocation="CenterOwner" ResizeMode="NoResize" WindowStyle="None">
+    <Window.Background>
+        <ImageBrush ImageSource="/Views/frog.jpg"/>
+    </Window.Background>
+    <Grid Margin="50">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center">
+            <TextBlock Text="Name:" Width="60" VerticalAlignment="Center" Foreground="#FF920EBB" FontSize="20"/>
+            <TextBox x:Name="NameBox" Width="399" BorderBrush="#FF920EBB" FontSize="18" Background="#FFFFF6FE" SelectionBrush="#FFFDA8F3" Foreground="#FF920EBB" SelectionTextBrush="#FFF6C6F0"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center">
+            <TextBlock Text="Image:" Width="63" VerticalAlignment="Center" FontSize="20" Foreground="#FF920EBB"/>
+            <TextBox x:Name="ImagePathBox" Width="317" FontSize="20" IsReadOnly="True" Background="#FFFFF6FE" BorderBrush="#FF920EBB" SelectionBrush="#FFFFF6FE" Foreground="#FF920EBB"/>
+            <Button Content="Browse..." FontSize="18" Width="80" Margin="5,0,0,0" Click="Browse_Click" BorderBrush="#FF920EBB" Foreground="#FF920EBB" Background="#FFF6C6F0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="OK" Width="100" FontSize="18" Margin="40,0" Click="OK_Click" Background="#FFF6C6F0" BorderBrush="#FF920EBB" Foreground="#FF920EBB"/>
+            <Button Content="Cancel" Width="100" FontSize="18" Margin="40,0" Click="Cancel_Click" Background="#FFF6C6F0" BorderBrush="#FF920EBB" Foreground="#FF920EBB"/>
+        </StackPanel>
+    </Grid>
+
+</Window>

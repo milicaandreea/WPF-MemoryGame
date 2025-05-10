@@ -1,0 +1,22 @@
+﻿<Window x:Class="MemoryGame.Views.AboutDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MemoryGame.Views"
+        mc:Ignorable="d"
+        Title="About" Height="200" Width="325"
+        WindowStartupLocation="CenterOwner" ResizeMode="NoResize" WindowStyle="None">
+    <Window.Background>
+        <ImageBrush ImageSource="/Views/wind.jpg"/>
+    </Window.Background>
+    <Grid Margin="8">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <TextBlock Text="Student: Milica Andreea" FontSize="16" FontWeight="Bold" TextAlignment="Center" Foreground="#FF920EBB"/>
+            <TextBlock Text="Email: andreea.milica@student.unitbv.ro" FontWeight="Bold" FontSize="14" TextAlignment="Center" Foreground="#FF920EBB"/>
+            <TextBlock Text="Group: 10LF233" FontSize="14" FontWeight="Bold" TextAlignment="Center" Foreground="#FF920EBB"/>
+            <TextBlock Text="Specialization: Computer Science (Informatică)" FontWeight="Bold" FontSize="14" TextAlignment="Center" Foreground="#FF920EBB"/>
+            <Button Content="Close" Width="100" Margin="0,10,0,0" Click="Close_Click" Background="#FFF6C6F0" Foreground="#FF920EBB" BorderBrush="#FF920EBB"/>
+        </StackPanel>
+    </Grid>
+</Window>

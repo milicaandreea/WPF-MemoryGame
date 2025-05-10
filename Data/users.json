@@ -1,0 +1,38 @@
+[
+  {
+    "Name": "andreea",
+    "ImagePath": "Images\\Users\\andreea.jpg",
+    "GamesPlayed": 0,
+    "GamesWon": 0
+  },
+  {
+    "Name": "marcel",
+    "ImagePath": "Images\\Users\\marcel.jpg",
+    "GamesPlayed": 1,
+    "GamesWon": 0
+  },
+  {
+    "Name": "mariana",
+    "ImagePath": "Images\\Users\\mariana.jpg",
+    "GamesPlayed": 2,
+    "GamesWon": 2
+  },
+  {
+    "Name": "mihai",
+    "ImagePath": "Images\\Users\\mihai.jpg",
+    "GamesPlayed": 1,
+    "GamesWon": 1
+  },
+  {
+    "Name": "mirelll",
+    "ImagePath": "Images\\Users\\mirelll.jpg",
+    "GamesPlayed": 0,
+    "GamesWon": 0
+  },
+  {
+    "Name": "adrian",
+    "ImagePath": "Images\\Users\\adrian.jpg",
+    "GamesPlayed": 1,
+    "GamesWon": 0
+  }
+]

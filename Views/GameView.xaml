@@ -1,0 +1,72 @@
+﻿<Window x:Class="MemoryGame.Views.GameView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:MemoryGame.ViewModels"
+        xmlns:views="clr-namespace:MemoryGame.Views"
+        Title="Memory Game" Height="600" Width="600"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized"
+        ResizeMode="NoResize"
+        WindowStyle="None">
+
+    <Window.DataContext>
+        <vm:GameViewModel />
+    </Window.DataContext>
+
+    <DockPanel Background="#FFF6C6F0">
+
+        <Menu DockPanel.Dock="Top" Background="#FFEE88E1" BorderBrush="#FF920EBB" Height="24">
+            <MenuItem Header="_File" Foreground="#FFFBDBFF" FontWeight="Bold" Background="#FFEE88E1" BorderBrush="{x:Null}">
+                <MenuItem Header="Category" Foreground="#FFEE88E1" Background="#FFFBDBFF" BorderBrush="#FFEE88E1">
+                    <MenuItem Header="BT21" Command="{Binding SelectCategoryCommand}" CommandParameter="BT21" Foreground="#FFEE88E1" Background="#FFFBDBFF" BorderBrush="#FFEE88E1"/>
+                    <MenuItem Header="Pastels" Command="{Binding SelectCategoryCommand}" CommandParameter="Pastels" Foreground="#FFEE88E1" Background="#FFFBDBFF" BorderBrush="#FFEE88E1"/>
+                    <MenuItem Header="Perfumes" Command="{Binding SelectCategoryCommand}" CommandParameter="Perfumes" Foreground="#FFEE88E1" Background="#FFFBDBFF" BorderBrush="#FFEE88E1"/>
+                </MenuItem>
+
+                <MenuItem Header="New Game" Command="{Binding GenerateBoardCommand}" Foreground="#FFEE88E1" Background="#FFFBDBFF" BorderBrush="#FFEE88E1"/>
+                <MenuItem Header="Open Game" Command="{Binding OpenGameCommand}" Foreground="#FFEE88E1" Background="#FFFBDBFF" BorderBrush="#FFEE88E1"/>
+                <MenuItem Header="Save Game" Command="{Binding SaveGameCommand}" Foreground="#FFEE88E1" Background="#FFFBDBFF" BorderBrush="#FFEE88E1" />
+
+                <MenuItem Header="Statistics"  Command="{Binding ShowStatisticsCommand}" Foreground="#FFEE88E1" Background="#FFFBDBFF" BorderBrush="#FFEE88E1"/>
+
+                <MenuItem Header="Exit" Command="{Binding ExitCommand}" Foreground="#FFEE88E1" Background="#FFFBDBFF" BorderBrush="#FFEE88E1"/>
+            </MenuItem>
+
+            <MenuItem Header="_Options" Foreground="#FFFBDBFF" FontWeight="Bold" Background="#FFEE88E1" BorderBrush="{x:Null}">
+                <MenuItem Header="Standard (4x4)" Command="{Binding SetStandardSizeCommand}" Foreground="#FFEE88E1" Background="#FFFBDBFF" BorderBrush="#FFEE88E1"/>
+                <MenuItem Header="Custom..." Command="{Binding SetCustomSizeCommand}" Foreground="#FFEE88E1" Background="#FFFBDBFF" BorderBrush="#FFEE88E1"/>
+            </MenuItem>
+
+            <MenuItem Header="_Help" Foreground="#FFFBDBFF" FontWeight="Bold" Background="#FFEE88E1" BorderBrush="{x:Null}" Height="24">
+                <MenuItem Header="About" Click="About_Click" Foreground="#FFEE88E1" Background="#FFFBDBFF" BorderBrush="#FFEE88E1"/>
+            </MenuItem>
+        </Menu>
+
+        <Grid Margin="10" Background="#FFFBDBFF">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock FontSize="15" Foreground="#FF920EBB" HorizontalAlignment="Center" Margin="0,0,0,0" FontWeight="Bold">
+                <Run Text="Time left: " FontSize="18"/>
+                <Run Text="{Binding TimeLeft}"/>
+                <Run Text=" seconds"/>
+            </TextBlock>
+
+            <ItemsControl Grid.Row="1" ItemsSource="{Binding Tiles}" Background="#FFFFF6FE" BorderBrush="#FF920EBB">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Rows="{Binding BoardRows}" Columns="{Binding BoardColumns}" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <views:TileControl Tag="{Binding}" />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+        </Grid>
+    </DockPanel>
+</Window>
