@@ -1,0 +1,275 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="bin\**" />
+    <EmbeddedResource Remove="bin\**" />
+    <None Remove="bin\**" />
+    <Page Remove="bin\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Categories\BT21\back.png" />
+    <None Remove="Images\Categories\BT21\bt21%281%29.png" />
+    <None Remove="Images\Categories\BT21\bt21%282%29.png" />
+    <None Remove="Images\Categories\BT21\chimmy.png" />
+    <None Remove="Images\Categories\BT21\chimmy2.png" />
+    <None Remove="Images\Categories\BT21\cooky.png" />
+    <None Remove="Images\Categories\BT21\cooky2.png" />
+    <None Remove="Images\Categories\BT21\koya.png" />
+    <None Remove="Images\Categories\BT21\koya2.png" />
+    <None Remove="Images\Categories\BT21\mang.png" />
+    <None Remove="Images\Categories\BT21\mang2.png" />
+    <None Remove="Images\Categories\BT21\mang3.png" />
+    <None Remove="Images\Categories\BT21\rj.png" />
+    <None Remove="Images\Categories\BT21\rj2.png" />
+    <None Remove="Images\Categories\BT21\shooky.png" />
+    <None Remove="Images\Categories\BT21\shooky2.png" />
+    <None Remove="Images\Categories\BT21\tata.png" />
+    <None Remove="Images\Categories\BT21\tata2.png" />
+    <None Remove="Images\Categories\BT21\van.png" />
+    <None Remove="Images\Categories\Pastels\back.png" />
+    <None Remove="Images\Categories\Pastels\black.png" />
+    <None Remove="Images\Categories\Pastels\blue.png" />
+    <None Remove="Images\Categories\Pastels\darkblue.png" />
+    <None Remove="Images\Categories\Pastels\darkgreen.png" />
+    <None Remove="Images\Categories\Pastels\darkorange.png" />
+    <None Remove="Images\Categories\Pastels\darkpink.png" />
+    <None Remove="Images\Categories\Pastels\darkpurple.png" />
+    <None Remove="Images\Categories\Pastels\darkred.png" />
+    <None Remove="Images\Categories\Pastels\darkyellow.png" />
+    <None Remove="Images\Categories\Pastels\green.png" />
+    <None Remove="Images\Categories\Pastels\green2.png" />
+    <None Remove="Images\Categories\Pastels\mix.png" />
+    <None Remove="Images\Categories\Pastels\orange.png" />
+    <None Remove="Images\Categories\Pastels\pink.png" />
+    <None Remove="Images\Categories\Pastels\pink2.png" />
+    <None Remove="Images\Categories\Pastels\purple.png" />
+    <None Remove="Images\Categories\Pastels\red.png" />
+    <None Remove="Images\Categories\Pastels\yellow.png" />
+    <None Remove="Images\Categories\Perfumes\aerin.png" />
+    <None Remove="Images\Categories\Perfumes\armani.png" />
+    <None Remove="Images\Categories\Perfumes\baccarat.png" />
+    <None Remove="Images\Categories\Perfumes\back.png" />
+    <None Remove="Images\Categories\Perfumes\chanel.png" />
+    <None Remove="Images\Categories\Perfumes\dior.png" />
+    <None Remove="Images\Categories\Perfumes\gaultier.png" />
+    <None Remove="Images\Categories\Perfumes\gucci.png" />
+    <None Remove="Images\Categories\Perfumes\gucci2.png" />
+    <None Remove="Images\Categories\Perfumes\jacobs.png" />
+    <None Remove="Images\Categories\Perfumes\jacobs2.png" />
+    <None Remove="Images\Categories\Perfumes\kenzo.png" />
+    <None Remove="Images\Categories\Perfumes\mugler.png" />
+    <None Remove="Images\Categories\Perfumes\prada.png" />
+    <None Remove="Images\Categories\Perfumes\rodriguez.png" />
+    <None Remove="Images\Categories\Perfumes\scandal.png" />
+    <None Remove="Images\Categories\Perfumes\valentino.png" />
+    <None Remove="Images\Categories\Perfumes\versace.png" />
+    <None Remove="Images\Categories\Perfumes\ysl.png" />
+    <None Remove="Views\cat.jpg" />
+    <None Remove="Views\cat2.png" />
+    <None Remove="Views\flowers.jpg" />
+    <None Remove="Views\frog.jpg" />
+    <None Remove="Views\girl.png" />
+    <None Remove="Views\lobby.jpg" />
+    <None Remove="Views\tree.jpg" />
+    <None Remove="Views\wind.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\Categories\BT21\back.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\BT21\bt21(1).png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\BT21\bt21(2).png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\BT21\chimmy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\BT21\chimmy2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\BT21\cooky.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\BT21\cooky2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\BT21\koya.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\BT21\koya2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\BT21\mang.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\BT21\mang2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\BT21\mang3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\BT21\rj.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\BT21\rj2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\BT21\shooky.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\BT21\shooky2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\BT21\tata.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\BT21\tata2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\BT21\van.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Pastels\back.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Pastels\black.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Pastels\blue.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Pastels\darkblue.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Pastels\darkgreen.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Pastels\darkorange.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Pastels\darkpink.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Pastels\darkpurple.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Pastels\darkred.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Pastels\darkyellow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Pastels\green.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Pastels\green2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Pastels\mix.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Pastels\orange.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Pastels\pink.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Pastels\pink2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Pastels\purple.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Pastels\red.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Pastels\yellow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Perfumes\aerin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Perfumes\armani.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Perfumes\baccarat.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Perfumes\back.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Perfumes\chanel.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Perfumes\dior.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Perfumes\gaultier.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Perfumes\gucci.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Perfumes\gucci2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Perfumes\jacobs.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Perfumes\jacobs2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Perfumes\kenzo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Perfumes\mugler.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Perfumes\prada.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Perfumes\rodriguez.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Perfumes\scandal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Perfumes\valentino.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Perfumes\versace.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Categories\Perfumes\ysl.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Views\cat.jpg" />
+    <Resource Include="Views\cat2.png" />
+    <Resource Include="Views\flowers.jpg" />
+    <Resource Include="Views\frog.jpg" />
+    <Resource Include="Views\girl.png" />
+    <Resource Include="Views\lobby.jpg" />
+    <Resource Include="Views\tree.jpg" />
+    <Resource Include="Views\wind.jpg" />
+  </ItemGroup>
+
+</Project>
